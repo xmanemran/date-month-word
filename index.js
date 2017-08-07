@@ -1,6 +1,9 @@
-function _toMonth(number){
-    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return (Number(number) && number < 13) ? months[number-1] : false;
+function _toMonth(number, type = 'f'){
+    let months = {
+        f: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        s: ["Jan.", "Feb. ", "Mar.", "Apr.", "May ", "June", "July", "Aug.", "Sept.", "Oct. ", "Nov.", "Dec."]
+    }
+    return (Number(number) && number < 13) ? months[type][number-1] : false;
 }
 
 function _toDate(number){
@@ -24,4 +27,3 @@ module.exports = {
     toMonth : _toMonth,
     toDate : _toDate
 } 
-
