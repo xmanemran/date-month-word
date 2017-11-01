@@ -1,9 +1,11 @@
 function _toMonth(number, type = 'f'){
+    console.log(number);
     let months = {
         f: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         s: ["Jan.", "Feb. ", "Mar.", "Apr.", "May ", "June", "July", "Aug.", "Sept.", "Oct. ", "Nov.", "Dec."]
     }
-    return (Number(number) && number < 13) ? months[type][number-1] : false;
+    number = Number(number)
+    return ((number > 0)  && number < 13) ? months[type][number-1] : false;
 }
 
 function _toDate(number){
