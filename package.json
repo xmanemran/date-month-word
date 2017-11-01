@@ -1,6 +1,6 @@
 {
   "name": "number-to-date-month-name",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make date and month more beautiful & more understandable for user. ",
   "main": "index.js",
   "scripts": {
